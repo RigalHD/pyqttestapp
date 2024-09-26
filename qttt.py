@@ -50,22 +50,28 @@ class AuthForm(QWidget):
     def initUI(self):
         self.setGeometry(300, 300, 300, 300)
         self.setWindowTitle('Вход или регистрация')
+        
         self.authorisation_label = QLabel("Авторизация", self)
         self.authorisation_label.adjustSize()
         self.authorisation_label.move(125, 50)
+        
         self.error_label = QLabel("", self)
         self.error_label.adjustSize()
         self.error_label.move(100, 75)
+        
         self.login_btn = QPushButton('Вход', self)
         self.login_btn.resize(self.login_btn.sizeHint())
         self.login_btn.move(160, 230)
         self.login_btn.clicked.connect(self.login_user)
+        
         self.reg_btn = QPushButton('Рег', self)
         self.reg_btn.resize(self.reg_btn.sizeHint())
         self.reg_btn.move(60, 230)
         self.reg_btn.clicked.connect(self.register_user)
+        
         self.name_input = QLineEdit(self)
         self.name_input.move(100, 150)
+        
         self.password_input = QLineEdit(self)
         self.password_input.move(100, 200)
 
